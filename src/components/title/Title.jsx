@@ -6,7 +6,7 @@ class Title extends Component {
         super()
         this.state = {
             add: [],
-            value:''
+            value:'1'
         }
     }
     render() {
