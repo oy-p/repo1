@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import List from './components/list/List'
 import Title from './components/title/Title'
+import store from './store'
+import {Provider} from 'react-redux'
 
 class App extends React.Component {
   constructor () {
@@ -18,8 +20,10 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
+        <Provider store={store}> 
         <Title></Title>
         <List list={this.state.arr}></List>
+        </Provider>  
       </div>
     );
   }
